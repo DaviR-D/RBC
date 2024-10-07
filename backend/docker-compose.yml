@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres
+    container_name: rbc
+    environment:
+      POSTGRES_USER: rbc
+      POSTGRES_PASSWORD: rbc
+      POSTGRES_DB: rbc
+    ports:
+      - "5432:5432"
