@@ -1,23 +1,28 @@
-import { UserController } from "./controller/UserController"
+import { DoencaController } from "./controller/DoencaController";
 
-export const Routes = [{
+export const Routes = [
+  {
     method: "get",
     route: "/users",
-    controller: UserController,
-    action: "all"
-}, {
+    controller: DoencaController,
+    action: "all",
+  },
+  {
     method: "get",
     route: "/users/:id",
-    controller: UserController,
-    action: "one"
-}, {
+    controller: DoencaController,
+    action: "one",
+  },
+  {
     method: "post",
     route: "/users",
-    controller: UserController,
-    action: "save"
-}, {
+    controller: DoencaController,
+    action: "save",
+  },
+  {
     method: "delete",
     route: "/users/:id",
-    controller: UserController,
-    action: "remove"
-}]
+    controller: DoencaController,
+    action: "remove",
+  },
+];
