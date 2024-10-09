@@ -3,26 +3,15 @@ import { DoencaController } from "./controller/DoencaController";
 export const Routes = [
   {
     method: "get",
-    route: "/users",
+    route: "/calcSim",
     controller: DoencaController,
-    action: "all",
+    action: "calcularSimilaridade",
   },
-  {
-    method: "get",
-    route: "/users/:id",
-    controller: DoencaController,
-    action: "one",
-  },
+
   {
     method: "post",
     route: "/users",
     controller: DoencaController,
     action: "save",
-  },
-  {
-    method: "delete",
-    route: "/users/:id",
-    controller: DoencaController,
-    action: "remove",
   },
 ];
