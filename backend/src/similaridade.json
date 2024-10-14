@@ -1,353 +1,353 @@
 {
-  "Area_Damaged": {
-    "Traducao": "Area-Danificada",
-    "Peso": 3,
-    "Variaveis": {
-      "low-areas": { "Traducao": "Áreas-Baixas", "Valor": 1 },
-      "upper-areas": { "Traducao": "Áreas-Altas", "Valor": 2 },
-      "scattered": { "Traducao": "Espalhado", "Valor": 3 },
-      "whole-field": { "Traducao": "Campo-Inteiro", "Valor": 4 }
+  "area_damaged": {
+    "traducao": "area-danificada",
+    "peso": 3,
+    "variaveis": {
+      "low-areas": { "traducao": "áreas-baixas", "valor": 1 },
+      "upper-areas": { "traducao": "áreas-altas", "valor": 2 },
+      "scattered": { "traducao": "espalhado", "valor": 3 },
+      "whole-field": { "traducao": "campo-inteiro", "valor": 4 }
     }
   },
 
   "canker_lesion": {
-    "Traducao": "lesão-de-cancro",
-    "Peso": 7,
-    "Variaveis": {
-      "dna": { "Traducao": "não-se-aplica", "Valor": 1 },
-      "tan": { "Traducao": "bronzeado", "Valor": 2 },
-      "brown": { "Traducao": "marrom", "Valor": 3 },
-      "dk-brown-blk": { "Traducao": "marrom-escuro-preto", "Valor": 4 }
+    "traducao": "lesão-de-cancro",
+    "peso": 7,
+    "variaveis": {
+      "dna": { "traducao": "não-se-aplica", "valor": 1 },
+      "tan": { "traducao": "bronzeado", "valor": 2 },
+      "brown": { "traducao": "marrom", "valor": 3 },
+      "dk-brown-blk": { "traducao": "marrom-escuro-preto", "valor": 4 }
     }
   },
 
-  "Crop_Hist": {
-    "Traducao": "Histórico-de-Colheita",
-    "Peso": 1,
-    "Variaveis": {
-      "same-1st-yr": { "Traducao": "mesmo-1°-ano", "Valor": 1 },
-      "same-lst-two-yrs": { "Traducao": "mesmo-últ-dois-anos", "Valor": 2 },
-      "severe": { "Traducao": "mesmo-últ-anos", "Valor": 3 },
-      "dif-1st-yr": { "Traducao": "dif-1°-ano", "Valor": 4 }
+  "crop_hist": {
+    "traducao": "histórico-de-colheita",
+    "peso": 1,
+    "variaveis": {
+      "same-1st-yr": { "traducao": "mesmo-1°-ano", "valor": 1 },
+      "same-lst-two-yrs": { "traducao": "mesmo-últ-dois-anos", "valor": 2 },
+      "severe": { "traducao": "mesmo-últ-anos", "valor": 3 },
+      "dif-1st-yr": { "traducao": "dif-1°-ano", "valor": 4 }
     }
   },
 
-  "Date": {
-    "Traducao": "Data",
-    "Peso": 2,
-    "Variaveis": {
-      "Janeiro": { "Traducao": "Janeiro", "Valor": 1 },
-      "Fevereiro": { "Traducao": "Fevereiro", "Valor": 2 },
-      "Março": { "Traducao": "Março", "Valor": 3 },
-      "Abril": { "Traducao": "Abril", "Valor": 4 },
-      "Maio": { "Traducao": "Maio", "Valor": 5 },
-      "Junho": { "Traducao": "Junho", "Valor": 6 },
-      "Julho": { "Traducao": "Julho", "Valor": 7 },
-      "Agosto": { "Traducao": "Agosto", "Valor": 8 },
-      "Setembro": { "Traducao": "Setembro", "Valor": 9 },
-      "Outubro": { "Traducao": "Outubro", "Valor": 10 },
-      "Novembro": { "Traducao": "Novembro", "Valor": 11 },
-      "Dezembro": { "Traducao": "Dezembro", "Valor": 12 }
+  "date": {
+    "traducao": "data",
+    "peso": 2,
+    "variaveis": {
+      "janeiro": { "traducao": "janeiro", "valor": 1 },
+      "fevereiro": { "traducao": "fevereiro", "valor": 2 },
+      "março": { "traducao": "março", "valor": 3 },
+      "abril": { "traducao": "abril", "valor": 4 },
+      "maio": { "traducao": "maio", "valor": 5 },
+      "junho": { "traducao": "junho", "valor": 6 },
+      "julho": { "traducao": "julho", "valor": 7 },
+      "agosto": { "traducao": "agosto", "valor": 8 },
+      "setembro": { "traducao": "setembro", "valor": 9 },
+      "outubro": { "traducao": "outubro", "valor": 10 },
+      "novembro": { "traducao": "novembro", "valor": 11 },
+      "dezembro": { "traducao": "dezembro", "valor": 12 }
     }
   },
 
-  "External_Decay": {
-    "Traducao": "Decadência-Externa",
-    "Peso": 7,
-    "Variaveis": {
-      "firm-and-dry": { "Traducao": "firme-e-seco", "Valor": 1 },
-      "absent": { "Traducao": "ausente", "Valor": 2 }
+  "external_decay": {
+    "traducao": "decadência-externa",
+    "peso": 7,
+    "variaveis": {
+      "firm-and-dry": { "traducao": "firme-e-seco", "valor": 1 },
+      "absent": { "traducao": "ausente", "valor": 2 }
     }
   },
 
-  "Fruit_Spots": {
-    "Traducao": "Manchas-na-Fruta",
-    "Peso": 7,
-    "Variaveis": {
-      "dna": { "Traducao": "não-se-aplica", "Valor": 1 },
-      "Absent": { "Traducao": "Ausente", "Valor": 2 },
-      "Colored": { "Traducao": "Colorido", "Valor": 3 },
-      "Brown-w/blk-specks": {
-        "Traducao": "Marron-com-manchas-pretas",
-        "Valor": 4
+  "fruit_spots": {
+    "traducao": "manchas-na-fruta",
+    "peso": 7,
+    "variaveis": {
+      "dna": { "traducao": "não-se-aplica", "valor": 1 },
+      "absent": { "traducao": "ausente", "valor": 2 },
+      "colored": { "traducao": "colorido", "valor": 3 },
+      "brown-w/blk-specks": {
+        "traducao": "marron-com-manchas-pretas",
+        "valor": 4
       }
     }
   },
 
-  "Fruiting_Bodies": {
-    "Traducao": "Corpos-Frutíferos",
-    "Peso": 7,
-    "Variaveis": {
-      "Present": { "Traducao": "Presente", "Valor": 1 },
-      "Absent": { "Traducao": "Ausente", "Valor": 2 }
+  "fruiting_bodies": {
+    "traducao": "corpos-frutíferos",
+    "peso": 7,
+    "variaveis": {
+      "present": { "traducao": "presente", "valor": 1 },
+      "absent": { "traducao": "ausente", "valor": 2 }
     }
   },
 
-  "Fruit_Pods": {
-    "Traducao": "Vagens-de-Fruta",
-    "Peso": 8,
-    "Variaveis": {
-      "Norm": { "Traducao": "Normal", "Valor": 1 },
-      "few-presents": { "Traducao": "alguns-presentes", "Valor": 2 },
-      "diseased": { "Traducao": "doente", "Valor": 3 },
-      "dna": { "Traducao": "não-se-aplica", "Valor": 4 },
-      "desconhecido": { "Traducao": "desconhecido", "Valor": "?" }
+  "fruit_pods": {
+    "traducao": "vagens-de-fruta",
+    "peso": 8,
+    "variaveis": {
+      "norm": { "traducao": "normal", "valor": 1 },
+      "few-presents": { "traducao": "alguns-presentes", "valor": 2 },
+      "diseased": { "traducao": "doente", "valor": 3 },
+      "dna": { "traducao": "não-se-aplica", "valor": 4 },
+      "desconhecido": { "traducao": "desconhecido", "valor": "?" }
     }
   },
 
-  "Germination": {
-    "Traducao": "Germinação",
-    "Peso": 1,
-    "Variaveis": {
-      "lt-80%": { "Traducao": "Menos-De-80%", "Valor": 1 },
-      "80-89%": { "Traducao": "80-89%", "Valor": 2 },
-      "90-100%": { "Traducao": "90-100%", "Valor": 3 }
+  "germination": {
+    "traducao": "germinação",
+    "peso": 1,
+    "variaveis": {
+      "lt-80%": { "traducao": "menos-de-80%", "valor": 1 },
+      "80-89%": { "traducao": "80-89%", "valor": 2 },
+      "90-100%": { "traducao": "90-100%", "valor": 3 }
     }
   },
 
-  "Hail": {
-    "Traducao": "Granizo",
-    "Peso": 3,
-    "Variaveis": {
-      "No": { "Traducao": "Não", "Valor": 1 },
-      "Yes": { "Traducao": "Sim", "Valor": 2 }
+  "hail": {
+    "traducao": "granizo",
+    "peso": 3,
+    "variaveis": {
+      "no": { "traducao": "não", "valor": 1 },
+      "yes": { "traducao": "sim", "valor": 2 }
     }
   },
 
   "int_discolor": {
-    "Traducao": "descoloração interior",
-    "Peso": 8,
-    "Variaveis": {
-      "None": { "Traducao": "Nenhum", "Valor": 1 },
-      "Brown": { "Traducao": "Marrom", "Valor": 2 },
-      "Black": { "Traducao": "Preto", "Valor": 3 }
+    "traducao": "descoloração interior",
+    "peso": 8,
+    "variaveis": {
+      "none": { "traducao": "nenhum", "valor": 1 },
+      "brown": { "traducao": "marrom", "valor": 2 },
+      "black": { "traducao": "preto", "valor": 3 }
     }
   },
 
   "leaf_malf": {
-    "Traducao": "malfo de folha",
-    "Peso": 7,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "malfo de folha",
+    "peso": 7,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "leaf_mild": {
-    "Traducao": "suavidade-da-folha",
-    "Peso": 8,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Upper-Surf": { "Traducao": "Surf-superior", "Valor": 2 },
-      "Lower-Surf": { "Traducao": "Surf-Inferior", "Valor": 3 }
+    "traducao": "suavidade-da-folha",
+    "peso": 8,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "upper-surf": { "traducao": "surf-superior", "valor": 2 },
+      "lower-surf": { "traducao": "surf-inferior", "valor": 3 }
     }
   },
 
   "leaf_shread": {
-    "Traducao": "pedaço de folha",
-    "Peso": 7,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "pedaço de folha",
+    "peso": 7,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "leafspots_halo": {
-    "Traducao": "manchas-auréola",
-    "Peso": 6,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "No-Yellow-Halos": { "Traducao": "Sem-Auréolas-Amarelas", "Valor": 2 },
-      "Yellow-Halos": { "Traducao": "Auréolas-Amarelas", "Valor": 3 }
+    "traducao": "manchas-auréola",
+    "peso": 6,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "no-yellow-halos": { "traducao": "sem-auréolas-amarelas", "valor": 2 },
+      "yellow-halos": { "traducao": "auréolas-amarelas", "valor": 3 }
     }
   },
 
   "leafspot_size": {
-    "Traducao": "tamanho da mancha",
-    "Peso": 7,
-    "Variaveis": {
-      "lt-1/8": { "Traducao": "menos-de-1/8", "Valor": 1 },
-      "gt-1/8": { "Traducao": "mais-de-1/8", "Valor": 2 },
-      "dna": { "Traducao": "não-se-aplica", "Valor": 3 }
+    "traducao": "tamanho da mancha",
+    "peso": 7,
+    "variaveis": {
+      "lt-1/8": { "traducao": "menos-de-1/8", "valor": 1 },
+      "gt-1/8": { "traducao": "mais-de-1/8", "valor": 2 },
+      "dna": { "traducao": "não-se-aplica", "valor": 3 }
     }
   },
 
   "leafspots_marg": {
-    "Traducao": "margem da mancha",
-    "Peso": 7,
-    "Variaveis": {
-      "no-w-s-marg": { "Traducao": "com-margem-nítida", "Valor": 1 },
-      "w-s-marg": { "Traducao": "sem-margem-nítida", "Valor": 2 },
-      "dna": { "Traducao": "não-se-aplica", "Valor": 3 }
+    "traducao": "margem da mancha",
+    "peso": 7,
+    "variaveis": {
+      "no-w-s-marg": { "traducao": "com-margem-nítida", "valor": 1 },
+      "w-s-marg": { "traducao": "sem-margem-nítida", "valor": 2 },
+      "dna": { "traducao": "não-se-aplica", "valor": 3 }
     }
   },
 
   "leaves": {
-    "Traducao": "folhas",
-    "Peso": 8,
-    "Variaveis": {
-      "Norm": { "Traducao": "Normal", "Valor": 1 },
-      "Abnorm": { "Traducao": "Anormal", "Valor": 2 }
+    "traducao": "folhas",
+    "peso": 8,
+    "variaveis": {
+      "norm": { "traducao": "normal", "valor": 1 },
+      "abnorm": { "traducao": "anormal", "valor": 2 }
     }
   },
 
   "lodging": {
-    "Traducao": "acamamento",
-    "Peso": 6,
-    "Variaveis": {
-      "No": { "Traducao": "Não", "Valor": 1 },
-      "Yes": { "Traducao": "Sim", "Valor": 2 }
+    "traducao": "acamamento",
+    "peso": 6,
+    "variaveis": {
+      "no": { "traducao": "não", "valor": 1 },
+      "yes": { "traducao": "sim", "valor": 2 }
     }
   },
 
   "mold_growth": {
-    "Traducao": "crescimento de mofo",
-    "Peso": 8,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "crescimento de mofo",
+    "peso": 8,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "mycelium": {
-    "Traducao": "micélio",
-    "Peso": 8,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "micélio",
+    "peso": 8,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "plant_growth": {
-    "Traducao": "Crescimento-da-Planta",
-    "Peso": 8,
-    "Variaveis": {
-      "Norm": { "Traducao": "Normal", "Valor": 1 },
-      "Abnorm": { "Traducao": "Anormal", "Valor": 2 }
+    "traducao": "crescimento-da-planta",
+    "peso": 8,
+    "variaveis": {
+      "norm": { "traducao": "normal", "valor": 1 },
+      "abnorm": { "traducao": "anormal", "valor": 2 }
     }
   },
 
   "plant_stand": {
-    "Traducao": "Estande-de-Plantas",
-    "Peso": 5,
-    "Variaveis": {
-      "lt-normal": { "Traducao": "menor-que-o-normal", "Valor": 1 },
-      "normal": { "Traducao": "normal", "Valor": 2 }
+    "traducao": "estande-de-plantas",
+    "peso": 5,
+    "variaveis": {
+      "lt-normal": { "traducao": "menor-que-o-normal", "valor": 1 },
+      "normal": { "traducao": "normal", "valor": 2 }
     }
   },
 
   "precip": {
-    "Traducao": "precipitação",
-    "Peso": 6,
-    "Variaveis": {
-      "lt-normal": { "Traducao": "menos-que-o-normal", "Valor": 1 },
-      "normal": { "Traducao": "normal", "Valor": 2 },
-      "gt-normal": { "Traducao": "maior-que-o-normal", "Valor": 3 }
+    "traducao": "precipitação",
+    "peso": 6,
+    "variaveis": {
+      "lt-normal": { "traducao": "menos-que-o-normal", "valor": 1 },
+      "normal": { "traducao": "normal", "valor": 2 },
+      "gt-normal": { "traducao": "maior-que-o-normal", "valor": 3 }
     }
   },
 
   "roots": {
-    "Traducao": "raízes",
-    "Peso": 8,
-    "Variaveis": {
-      "norm": { "Traducao": "normal", "Valor": 1 },
-      "galls-cysts": { "Traducao": "galhas-cistos", "Valor": 2 },
-      "rotted": { "Traducao": "podre", "Valor": 3 }
+    "traducao": "raízes",
+    "peso": 8,
+    "variaveis": {
+      "norm": { "traducao": "normal", "valor": 1 },
+      "galls-cysts": { "traducao": "galhas-cistos", "valor": 2 },
+      "rotted": { "traducao": "podre", "valor": 3 }
     }
   },
 
   "sclerotia": {
-    "Traducao": "esclerócio",
-    "Peso": 8,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "esclerócio",
+    "peso": 8,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "seed": {
-    "Traducao": "semente",
-    "Peso": 7,
-    "Variaveis": {
-      "Norm": { "Traducao": "Normal", "Valor": 1 },
-      "Abnorm": { "Traducao": "Anormal", "Valor": 2 }
+    "traducao": "semente",
+    "peso": 7,
+    "variaveis": {
+      "norm": { "traducao": "normal", "valor": 1 },
+      "abnorm": { "traducao": "anormal", "valor": 2 }
     }
   },
 
   "seed_discolor": {
-    "Traducao": "descoloração da semente",
-    "Peso": 7,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "descoloração da semente",
+    "peso": 7,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "seed_size": {
-    "Traducao": "tamanho da semente",
-    "Peso": 8,
-    "Variaveis": {
-      "lt-normal": { "Traducao": "menor-que-o-normal", "Valor": 1 },
-      "normal": { "Traducao": "normal", "Valor": 2 }
+    "traducao": "tamanho da semente",
+    "peso": 8,
+    "variaveis": {
+      "lt-norm": { "traducao": "menor-que-o-normal", "valor": 1 },
+      "norm": { "traducao": "normal", "valor": 2 }
     }
   },
 
   "seed_tmt": {
-    "Traducao": "tratamento-da-semente",
-    "Peso": 1,
-    "Variaveis": {
-      "none": { "Traducao": "nenhum", "Valor": 1 },
-      "fungicida": { "Traducao": "fungicida", "Valor": 2 },
-      "outros": { "Traducao": "outros", "Valor": 3 }
+    "traducao": "tratamento-da-semente",
+    "peso": 1,
+    "variaveis": {
+      "none": { "traducao": "nenhum", "valor": 1 },
+      "fungicida": { "traducao": "fungicida", "valor": 2 },
+      "outros": { "traducao": "outros", "valor": 3 }
     }
   },
 
   "severity": {
-    "Traducao": "severidade",
-    "Peso": 3,
-    "Variaveis": {
-      "minor": { "Traducao": "menor", "Valor": 1 },
-      "pot-severe": { "Traducao": "potencialmente-severa", "Valor": 2 },
-      "severe": { "Traducao": "severa", "Valor": 3 }
+    "traducao": "severidade",
+    "peso": 3,
+    "variaveis": {
+      "minor": { "traducao": "menor", "valor": 1 },
+      "pot-severe": { "traducao": "potencialmente-severa", "valor": 2 },
+      "severe": { "traducao": "severa", "valor": 3 }
     }
   },
 
   "shriveling": {
-    "Traducao": "murchação",
-    "Peso": 8,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Present": { "Traducao": "Presente", "Valor": 2 }
+    "traducao": "murchação",
+    "peso": 8,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "present": { "traducao": "presente", "valor": 2 }
     }
   },
 
   "stem": {
-    "Traducao": "tronco",
-    "Peso": 8,
-    "Variaveis": {
-      "norm": { "Traducao": "normal", "Valor": 1 },
-      "abnorm": { "Traducao": "anormal", "Valor": 2 }
+    "traducao": "tronco",
+    "peso": 8,
+    "variaveis": {
+      "norm": { "traducao": "normal", "valor": 1 },
+      "abnorm": { "traducao": "anormal", "valor": 2 }
     }
   },
 
   "stem_cankers": {
-    "Traducao": "cranco-de-tronco",
-    "Peso": 7,
-    "Variaveis": {
-      "Absent": { "Traducao": "Ausente", "Valor": 1 },
-      "Below-Soil": { "Traducao": "Abaixo-do-solo", "Valor": 2 },
-      "Above-Soil": { "Traducao": "Acima-do-solo", "Valor": 3 },
-      "Above-Sec-Nde": { "Traducao": "Acima-do-Segundo-Nó", "Valor": 4 }
+    "traducao": "cranco-de-tronco",
+    "peso": 7,
+    "variaveis": {
+      "absent": { "traducao": "ausente", "valor": 1 },
+      "below-soil": { "traducao": "abaixo-do-solo", "valor": 2 },
+      "above-soil": { "traducao": "acima-do-solo", "valor": 3 },
+      "above-sec-nde": { "traducao": "acima-do-segundo-nó", "valor": 4 }
     }
   },
 
   "temp": {
-    "Traducao": "temperatura",
-    "Peso": 4,
-    "Variaveis": {
-      "lt-normal": { "Traducao": "menor-que-o-normal", "Valor": 1 },
-      "normal": { "Traducao": "normal", "Valor": 2 },
-      "gt-normal": { "Traducao": "maior-que-o-normal", "Valor": 3 }
+    "traducao": "temperatura",
+    "peso": 4,
+    "variaveis": {
+      "lt-norm": { "traducao": "menor-que-o-normal", "valor": 1 },
+      "norm": { "traducao": "normal", "valor": 2 },
+      "gt-norm": { "traducao": "maior-que-o-normal", "valor": 3 }
     }
   }
 }

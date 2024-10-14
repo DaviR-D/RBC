@@ -11,7 +11,19 @@ export class DoencaController {
     response: Response,
     next: NextFunction
   ) {
-    const doencas = await this.doencaRepository.find();
-    return { s: this.similaridade, d: doencas };
+    const doencas = await this.doencaRepository
+      .createQueryBuilder("doenca")
+      .select("*")
+      .getRawMany();
+
+    const doencasLowerCase = doencas.map((doenca) => {
+      return Object.fromEntries(
+        Object.entries(doenca).map(([key, value]) =>
+          typeof value === "string" ? [key, value.toLowerCase()] : [key, value]
+        )
+      );
+    });
+
+    return doencasLowerCase;
   }
 }
