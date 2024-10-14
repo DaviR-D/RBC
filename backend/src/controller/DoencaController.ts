@@ -11,47 +11,10 @@ export class DoencaController {
     response: Response,
     next: NextFunction
   ) {
-    //let novo_caso = request.body;
+    let { novo_caso } = request.body;
+    console.log(novo_caso);
     let casos = await this.recuperarCasos();
     let casos_convertidos = this.converterCasos(casos);
-
-    let novo_caso = {
-      area_damaged: "low-areas",
-      canker_lesion: "brown",
-      crop_hist: "same-1st-yr",
-      date: "outubro",
-      external_decay: "firm-and-dry",
-      fruit_spots: "dna",
-      fruiting_bodies: "present",
-      fruit_pods: "norm",
-      germination: "90-100%",
-      hail: "yes",
-      int_discolor: "none",
-      leaf_malf: "absent",
-      leaf_mild: "absent",
-      leaf_shread: "absent",
-      leafspots_halo: "absent",
-      leafspot_size: "dna",
-      leafspots_marg: "dna",
-      leaves: "abnorm",
-      lodging: "no",
-      mold_growth: "absent",
-      mycelium: "absent",
-      plant_growth: "abnorm",
-      plant_stand: "normal",
-      precip: "gt-normal",
-      roots: "norm",
-      sclerotia: "absent",
-      seed: "norm",
-      seed_discolor: "absent",
-      seed_size: "norm",
-      seed_tmt: "none",
-      severity: "pot-severe",
-      shriveling: "absent",
-      stem: "abnorm",
-      stem_cankers: "above-sec-nde",
-      temp: "norm",
-    };
 
     novo_caso = this.converterCaso(novo_caso);
 
