@@ -14,7 +14,63 @@ export class DoencaController {
     //let novo_caso = request.body;
     let casos = await this.recuperarCasos();
     let casos_convertidos = this.converterCasos(casos);
-    return casos_convertidos;
+
+    let novo_caso = {
+      area_damaged: "low-areas",
+      canker_lesion: "brown",
+      crop_hist: "same-1st-yr",
+      date: "outubro",
+      external_decay: "firm-and-dry",
+      fruit_spots: "dna",
+      fruiting_bodies: "present",
+      fruit_pods: "norm",
+      germination: "90-100%",
+      hail: "yes",
+      int_discolor: "none",
+      leaf_malf: "absent",
+      leaf_mild: "absent",
+      leaf_shread: "absent",
+      leafspots_halo: "absent",
+      leafspot_size: "dna",
+      leafspots_marg: "dna",
+      leaves: "abnorm",
+      lodging: "no",
+      mold_growth: "absent",
+      mycelium: "absent",
+      plant_growth: "abnorm",
+      plant_stand: "normal",
+      precip: "gt-normal",
+      roots: "norm",
+      sclerotia: "absent",
+      seed: "norm",
+      seed_discolor: "absent",
+      seed_size: "norm",
+      seed_tmt: "none",
+      severity: "pot-severe",
+      shriveling: "absent",
+      stem: "abnorm",
+      stem_cankers: "above-sec-nde",
+      temp: "norm",
+    };
+
+    novo_caso = this.converterCaso(novo_caso);
+
+    let similaridadeGlobalBase = this.calcularSimGlobalBase(
+      casos_convertidos,
+      novo_caso
+    );
+
+    return similaridadeGlobalBase;
+  }
+
+  calcularSimGlobalBase(base, novo_caso) {
+    let simBaseCasos = [];
+
+    base.forEach((caso_base) => {
+      simBaseCasos.push(this.calcularSimGlobal(caso_base, novo_caso));
+    });
+
+    return simBaseCasos;
   }
 
   calcularSimGlobal(caso_base, novo_caso) {
@@ -32,14 +88,13 @@ export class DoencaController {
       simGlobal += caso_base[local] * this.similaridade[local]["peso"];
     });
 
-    Object.keys(this.similaridade).forEach((local) => {
-      simGlobal += caso_base[local] * this.similaridade[local]["peso"];
-    });
-
     simGlobal = simGlobal / 195;
 
     caso_base["similaridade"] = simGlobal;
+
+    return caso_base;
   }
+
   calcularSimLocal(caso_base, novo_caso, lim_inferior, lim_superior) {
     let simLocal =
       1 - Math.abs(novo_caso - caso_base) / (lim_superior - lim_inferior);
