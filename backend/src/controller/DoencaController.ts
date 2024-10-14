@@ -11,9 +11,40 @@ export class DoencaController {
     response: Response,
     next: NextFunction
   ) {
+    //let novo_caso = request.body;
     let casos = await this.recuperarCasos();
     let casos_convertidos = this.converterCasos(casos);
     return casos_convertidos;
+  }
+
+  calcularSimGlobal(caso_base, novo_caso) {
+    let simGlobal = 0;
+    Object.keys(this.similaridade).forEach((local) => {
+      caso_base[local] = this.calcularSimLocal(
+        caso_base[local],
+        novo_caso[local],
+        this.similaridade[local]["limites"]["limite_inferior"],
+        this.similaridade[local]["limites"]["limite_superior"]
+      );
+    });
+
+    Object.keys(this.similaridade).forEach((local) => {
+      simGlobal += caso_base[local] * this.similaridade[local]["peso"];
+    });
+
+    Object.keys(this.similaridade).forEach((local) => {
+      simGlobal += caso_base[local] * this.similaridade[local]["peso"];
+    });
+
+    simGlobal = simGlobal / 195;
+
+    caso_base["similaridade"] = simGlobal;
+  }
+  calcularSimLocal(caso_base, novo_caso, lim_inferior, lim_superior) {
+    let simLocal =
+      1 - Math.abs(novo_caso - caso_base) / (lim_superior - lim_inferior);
+
+    return simLocal;
   }
 
   async recuperarCasos() {
