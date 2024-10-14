@@ -11,6 +11,12 @@ export class DoencaController {
     response: Response,
     next: NextFunction
   ) {
+    let casos = await this.recuperarCasos();
+    let casos_convertidos = await this.converterCasos(casos);
+    return casos_convertidos;
+  }
+
+  async recuperarCasos() {
     const doencas = await this.doencaRepository
       .createQueryBuilder("doenca")
       .select("*")
@@ -25,5 +31,24 @@ export class DoencaController {
     });
 
     return doencasLowerCase;
+  }
+
+  async converterCasos(casos) {
+    let casos_convertidos = casos.map((caso) => {
+      return this.converterCaso(caso);
+    });
+  }
+
+  async converterCaso(caso) {
+    Object.keys(this.similaridade).forEach((characteristc) => {
+      let valor_string = caso[characteristc];
+      if (valor_string == "desconhecido") return;
+      let valor_peso =
+        this.similaridade[characteristc]["variaveis"][valor_string]["valor"];
+
+      caso[characteristc] = valor_peso;
+    });
+
+    return caso;
   }
 }
