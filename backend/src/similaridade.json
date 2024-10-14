@@ -27,8 +27,8 @@
     "variaveis": {
       "same-1st-yr": { "traducao": "mesmo-1°-ano", "valor": 1 },
       "same-lst-two-yrs": { "traducao": "mesmo-últ-dois-anos", "valor": 2 },
-      "severe": { "traducao": "mesmo-últ-anos", "valor": 3 },
-      "dif-1st-yr": { "traducao": "dif-1°-ano", "valor": 4 }
+      "same-lst-sev-yrs": { "traducao": "mesmo-últ-anos", "valor": 3 },
+      "diff-1st-year": { "traducao": "dif-1°-ano", "valor": 4 }
     }
   },
 
@@ -88,7 +88,7 @@
     "peso": 8,
     "variaveis": {
       "norm": { "traducao": "normal", "valor": 1 },
-      "few-presents": { "traducao": "alguns-presentes", "valor": 2 },
+      "few-present": { "traducao": "alguns-presentes", "valor": 2 },
       "diseased": { "traducao": "doente", "valor": 3 },
       "dna": { "traducao": "não-se-aplica", "valor": 4 },
       "desconhecido": { "traducao": "desconhecido", "valor": "?" }
