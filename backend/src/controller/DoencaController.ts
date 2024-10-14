@@ -12,7 +12,7 @@ export class DoencaController {
     next: NextFunction
   ) {
     let casos = await this.recuperarCasos();
-    let casos_convertidos = await this.converterCasos(casos);
+    let casos_convertidos = this.converterCasos(casos);
     return casos_convertidos;
   }
 
@@ -33,13 +33,15 @@ export class DoencaController {
     return doencasLowerCase;
   }
 
-  async converterCasos(casos) {
+  converterCasos(casos) {
     let casos_convertidos = casos.map((caso) => {
       return this.converterCaso(caso);
     });
+
+    return casos_convertidos;
   }
 
-  async converterCaso(caso) {
+  converterCaso(caso) {
     Object.keys(this.similaridade).forEach((characteristc) => {
       let valor_string = caso[characteristc];
       if (valor_string == "desconhecido") return;

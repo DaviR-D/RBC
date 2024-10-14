@@ -12,4 +12,4 @@ for (let index = 0; index < casos.length; index++) {
   });
 }
 
-console.log(casos[1]);
+console.log(casos[0]);

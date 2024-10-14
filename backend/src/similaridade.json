@@ -7,6 +7,10 @@
       "upper-areas": { "traducao": "áreas-altas", "valor": 2 },
       "scattered": { "traducao": "espalhado", "valor": 3 },
       "whole-field": { "traducao": "campo-inteiro", "valor": 4 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 4
     }
   },
 
@@ -18,6 +22,10 @@
       "tan": { "traducao": "bronzeado", "valor": 2 },
       "brown": { "traducao": "marrom", "valor": 3 },
       "dk-brown-blk": { "traducao": "marrom-escuro-preto", "valor": 4 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 4
     }
   },
 
@@ -29,6 +37,10 @@
       "same-lst-two-yrs": { "traducao": "mesmo-últ-dois-anos", "valor": 2 },
       "same-lst-sev-yrs": { "traducao": "mesmo-últ-anos", "valor": 3 },
       "diff-1st-year": { "traducao": "dif-1°-ano", "valor": 4 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 4
     }
   },
 
@@ -48,6 +60,10 @@
       "outubro": { "traducao": "outubro", "valor": 10 },
       "novembro": { "traducao": "novembro", "valor": 11 },
       "dezembro": { "traducao": "dezembro", "valor": 12 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 12
     }
   },
 
@@ -57,6 +73,10 @@
     "variaveis": {
       "firm-and-dry": { "traducao": "firme-e-seco", "valor": 1 },
       "absent": { "traducao": "ausente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -71,6 +91,10 @@
         "traducao": "marron-com-manchas-pretas",
         "valor": 4
       }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 4
     }
   },
 
@@ -80,6 +104,10 @@
     "variaveis": {
       "present": { "traducao": "presente", "valor": 1 },
       "absent": { "traducao": "ausente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -92,6 +120,10 @@
       "diseased": { "traducao": "doente", "valor": 3 },
       "dna": { "traducao": "não-se-aplica", "valor": 4 },
       "desconhecido": { "traducao": "desconhecido", "valor": "?" }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 4
     }
   },
 
@@ -102,6 +134,10 @@
       "lt-80%": { "traducao": "menos-de-80%", "valor": 1 },
       "80-89%": { "traducao": "80-89%", "valor": 2 },
       "90-100%": { "traducao": "90-100%", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -111,6 +147,10 @@
     "variaveis": {
       "no": { "traducao": "não", "valor": 1 },
       "yes": { "traducao": "sim", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -121,6 +161,10 @@
       "none": { "traducao": "nenhum", "valor": 1 },
       "brown": { "traducao": "marrom", "valor": 2 },
       "black": { "traducao": "preto", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -130,6 +174,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -140,6 +188,10 @@
       "absent": { "traducao": "ausente", "valor": 1 },
       "upper-surf": { "traducao": "surf-superior", "valor": 2 },
       "lower-surf": { "traducao": "surf-inferior", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -149,6 +201,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -159,6 +215,10 @@
       "absent": { "traducao": "ausente", "valor": 1 },
       "no-yellow-halos": { "traducao": "sem-auréolas-amarelas", "valor": 2 },
       "yellow-halos": { "traducao": "auréolas-amarelas", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -169,6 +229,10 @@
       "lt-1/8": { "traducao": "menos-de-1/8", "valor": 1 },
       "gt-1/8": { "traducao": "mais-de-1/8", "valor": 2 },
       "dna": { "traducao": "não-se-aplica", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -179,6 +243,10 @@
       "no-w-s-marg": { "traducao": "com-margem-nítida", "valor": 1 },
       "w-s-marg": { "traducao": "sem-margem-nítida", "valor": 2 },
       "dna": { "traducao": "não-se-aplica", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -188,6 +256,10 @@
     "variaveis": {
       "norm": { "traducao": "normal", "valor": 1 },
       "abnorm": { "traducao": "anormal", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -197,6 +269,10 @@
     "variaveis": {
       "no": { "traducao": "não", "valor": 1 },
       "yes": { "traducao": "sim", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -206,6 +282,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -215,6 +295,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -224,6 +308,10 @@
     "variaveis": {
       "norm": { "traducao": "normal", "valor": 1 },
       "abnorm": { "traducao": "anormal", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -233,6 +321,10 @@
     "variaveis": {
       "lt-normal": { "traducao": "menor-que-o-normal", "valor": 1 },
       "normal": { "traducao": "normal", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -243,6 +335,10 @@
       "lt-normal": { "traducao": "menos-que-o-normal", "valor": 1 },
       "normal": { "traducao": "normal", "valor": 2 },
       "gt-normal": { "traducao": "maior-que-o-normal", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -253,6 +349,10 @@
       "norm": { "traducao": "normal", "valor": 1 },
       "galls-cysts": { "traducao": "galhas-cistos", "valor": 2 },
       "rotted": { "traducao": "podre", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -262,6 +362,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -271,6 +375,10 @@
     "variaveis": {
       "norm": { "traducao": "normal", "valor": 1 },
       "abnorm": { "traducao": "anormal", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -280,6 +388,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -289,6 +401,10 @@
     "variaveis": {
       "lt-norm": { "traducao": "menor-que-o-normal", "valor": 1 },
       "norm": { "traducao": "normal", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -299,6 +415,10 @@
       "none": { "traducao": "nenhum", "valor": 1 },
       "fungicida": { "traducao": "fungicida", "valor": 2 },
       "outros": { "traducao": "outros", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -309,6 +429,10 @@
       "minor": { "traducao": "menor", "valor": 1 },
       "pot-severe": { "traducao": "potencialmente-severa", "valor": 2 },
       "severe": { "traducao": "severa", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   },
 
@@ -318,6 +442,10 @@
     "variaveis": {
       "absent": { "traducao": "ausente", "valor": 1 },
       "present": { "traducao": "presente", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -327,6 +455,10 @@
     "variaveis": {
       "norm": { "traducao": "normal", "valor": 1 },
       "abnorm": { "traducao": "anormal", "valor": 2 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 2
     }
   },
 
@@ -338,6 +470,10 @@
       "below-soil": { "traducao": "abaixo-do-solo", "valor": 2 },
       "above-soil": { "traducao": "acima-do-solo", "valor": 3 },
       "above-sec-nde": { "traducao": "acima-do-segundo-nó", "valor": 4 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 4
     }
   },
 
@@ -348,6 +484,10 @@
       "lt-norm": { "traducao": "menor-que-o-normal", "valor": 1 },
       "norm": { "traducao": "normal", "valor": 2 },
       "gt-norm": { "traducao": "maior-que-o-normal", "valor": 3 }
+    },
+    "limites": {
+      "limite_inferior": 1,
+      "limite_superior": 3
     }
   }
 }
