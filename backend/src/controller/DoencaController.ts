@@ -34,7 +34,7 @@ export class DoencaController {
       return "Caso idêntico:" + similaridadeGlobalBase[0];
     else {
       novo_caso_final.descDoenca = similaridadeGlobalBase[0].descDoenca;
-      //await this.doencaRepository.save(novo_caso_final);
+      await this.doencaRepository.save(novo_caso_final);
 
       return similaridadeGlobalBase;
     }
