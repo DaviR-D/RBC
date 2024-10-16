@@ -16,6 +16,9 @@ export class DoencaController {
     let casos = await this.recuperarCasos();
     let casos_convertidos = this.converterCasos(casos);
 
+    let novo_caso_final = { ...novo_caso };
+    //console.log(novo_caso_final);
+
     novo_caso = this.converterCaso(novo_caso);
 
     let similaridadeGlobalBase = this.calcularSimGlobalBase(
@@ -23,7 +26,18 @@ export class DoencaController {
       novo_caso
     );
 
-    return similaridadeGlobalBase;
+    similaridadeGlobalBase = similaridadeGlobalBase.sort(
+      (a, b) => b.similaridade - a.similaridade
+    );
+
+    if (similaridadeGlobalBase[0].similaridade >= 1)
+      return "Caso idêntico:" + similaridadeGlobalBase[0];
+    else {
+      novo_caso_final.descDoenca = similaridadeGlobalBase[0].descDoenca;
+      //await this.doencaRepository.save(novo_caso_final);
+
+      return similaridadeGlobalBase;
+    }
   }
 
   calcularSimGlobalBase(base, novo_caso) {
@@ -59,6 +73,9 @@ export class DoencaController {
   }
 
   calcularSimLocal(caso_base, novo_caso, lim_inferior, lim_superior) {
+    if (caso_base == "desconhecido") {
+      caso_base = 0;
+    }
     let simLocal =
       1 - Math.abs(novo_caso - caso_base) / (lim_superior - lim_inferior);
 
