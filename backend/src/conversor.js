@@ -1,6 +1,14 @@
 similaridade = require("./similaridade.json");
 casos = require("./casos.json");
 
+
+ Object.keys(similaridade).forEach((characteristc) => {
+    console.log(characteristc + ":" + 'null' + ',')
+
+   //console.log(similaridade[characteristc]["variaveis"])
+    //console.log(',')
+  });
+
 for (let index = 0; index < casos.length; index++) {
   Object.keys(similaridade).forEach((characteristc) => {
     valor_string = casos[index][characteristc];
@@ -12,4 +20,4 @@ for (let index = 0; index < casos.length; index++) {
   });
 }
 
-console.log(casos[0]);
+//console.log(casos[0]);

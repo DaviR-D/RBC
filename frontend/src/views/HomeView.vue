@@ -1,32 +1,266 @@
 <template>
-  <div class="container">
-    <div class="button-grid">
-      <button>Consultar Casos Anteriores</button>
-      <button>Cadastrar Novo Caso</button>
-      <button>Revisar Casos</button>
-      <button>Gerenciar Base de Casos</button>
+  <div>
+    <h1>Selecione as características</h1>
+
+    <div v-for="(options, key) in data" :key="key">
+      <label :for="key">{{ key }}</label>
+      <select :id="key" v-model="selected[key]">
+        <option v-for="(value, optionKey) in options" :key="optionKey" :value="optionKey">
+          {{ optionKey }}
+        </option>
+      </select>
     </div>
+    <button @click="calcSim">Calcular Similaridade</button>
   </div>
 </template>
 
-<script setup></script>
-<style scoped>
-.container {
-  position: relative;
+<script>
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      data: {
+        area_damaged: {
+          'low-areas': { traducao: 'áreas-baixas', valor: 1 },
+          'upper-areas': { traducao: 'áreas-altas', valor: 2 },
+          scattered: { traducao: 'espalhado', valor: 3 },
+          'whole-field': { traducao: 'campo-inteiro', valor: 4 }
+        },
+        canker_lesion: {
+          dna: { traducao: 'não-se-aplica', valor: 1 },
+          tan: { traducao: 'bronzeado', valor: 2 },
+          brown: { traducao: 'marrom', valor: 3 },
+          'dk-brown-blk': { traducao: 'marrom-escuro-preto', valor: 4 }
+        },
+        crop_hist: {
+          'same-1st-yr': { traducao: 'mesmo-1°-ano', valor: 1 },
+          'same-lst-two-yrs': { traducao: 'mesmo-últ-dois-anos', valor: 2 },
+          'same-lst-sev-yrs': { traducao: 'mesmo-últ-anos', valor: 3 },
+          'diff-1st-year': { traducao: 'dif-1°-ano', valor: 4 }
+        },
+        date: {
+          janeiro: { traducao: 'janeiro', valor: 1 },
+          fevereiro: { traducao: 'fevereiro', valor: 2 },
+          março: { traducao: 'março', valor: 3 },
+          abril: { traducao: 'abril', valor: 4 },
+          maio: { traducao: 'maio', valor: 5 },
+          junho: { traducao: 'junho', valor: 6 },
+          julho: { traducao: 'julho', valor: 7 },
+          agosto: { traducao: 'agosto', valor: 8 },
+          setembro: { traducao: 'setembro', valor: 9 },
+          outubro: { traducao: 'outubro', valor: 10 },
+          novembro: { traducao: 'novembro', valor: 11 },
+          dezembro: { traducao: 'dezembro', valor: 12 }
+        },
+        external_decay: {
+          'firm-and-dry': { traducao: 'firme-e-seco', valor: 1 },
+          absent: { traducao: 'ausente', valor: 2 }
+        },
+        fruit_spots: {
+          dna: { traducao: 'não-se-aplica', valor: 1 },
+          absent: { traducao: 'ausente', valor: 2 },
+          colored: { traducao: 'colorido', valor: 3 },
+          'brown-w/blk-specks': { traducao: 'marron-com-manchas-pretas', valor: 4 }
+        },
+        fruiting_bodies: {
+          present: { traducao: 'presente', valor: 1 },
+          absent: { traducao: 'ausente', valor: 2 }
+        },
+        fruit_pods: {
+          norm: { traducao: 'normal', valor: 1 },
+          'few-present': { traducao: 'alguns-presentes', valor: 2 },
+          diseased: { traducao: 'doente', valor: 3 },
+          dna: { traducao: 'não-se-aplica', valor: 4 },
+          desconhecido: { traducao: 'desconhecido', valor: '?' }
+        },
+        germination: {
+          'lt-80%': { traducao: 'menos-de-80%', valor: 1 },
+          '80-89%': { traducao: '80-89%', valor: 2 },
+          '90-100%': { traducao: '90-100%', valor: 3 }
+        },
+        hail: {
+          no: { traducao: 'não', valor: 1 },
+          yes: { traducao: 'sim', valor: 2 }
+        },
+        int_discolor: {
+          none: { traducao: 'nenhum', valor: 1 },
+          brown: { traducao: 'marrom', valor: 2 },
+          black: { traducao: 'preto', valor: 3 }
+        },
+        leaf_malf: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        leaf_mild: {
+          absent: { traducao: 'ausente', valor: 1 },
+          'upper-surf': { traducao: 'surf-superior', valor: 2 },
+          'lower-surf': { traducao: 'surf-inferior', valor: 3 }
+        },
+        leaf_shread: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        leafspots_halo: {
+          absent: { traducao: 'ausente', valor: 1 },
+          'no-yellow-halos': { traducao: 'sem-auréolas-amarelas', valor: 2 },
+          'yellow-halos': { traducao: 'auréolas-amarelas', valor: 3 }
+        },
+        leafspot_size: {
+          'lt-1/8': { traducao: 'menos-de-1/8', valor: 1 },
+          'gt-1/8': { traducao: 'mais-de-1/8', valor: 2 },
+          dna: { traducao: 'não-se-aplica', valor: 3 }
+        },
+        leafspots_marg: {
+          'no-w-s-marg': { traducao: 'com-margem-nítida', valor: 1 },
+          'w-s-marg': { traducao: 'sem-margem-nítida', valor: 2 },
+          dna: { traducao: 'não-se-aplica', valor: 3 }
+        },
+        leaves: {
+          norm: { traducao: 'normal', valor: 1 },
+          abnorm: { traducao: 'anormal', valor: 2 }
+        },
+        lodging: {
+          no: { traducao: 'não', valor: 1 },
+          yes: { traducao: 'sim', valor: 2 }
+        },
+        mold_growth: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        mycelium: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        plant_growth: {
+          norm: { traducao: 'normal', valor: 1 },
+          abnorm: { traducao: 'anormal', valor: 2 }
+        },
+        plant_stand: {
+          'lt-normal': { traducao: 'menor-que-o-normal', valor: 1 },
+          normal: { traducao: 'normal', valor: 2 }
+        },
+        precip: {
+          'lt-normal': { traducao: 'menos-que-o-normal', valor: 1 },
+          normal: { traducao: 'normal', valor: 2 },
+          'gt-normal': { traducao: 'maior-que-o-normal', valor: 3 }
+        },
+        roots: {
+          norm: { traducao: 'normal', valor: 1 },
+          'galls-cysts': { traducao: 'galhas-cistos', valor: 2 },
+          rotted: { traducao: 'podre', valor: 3 }
+        },
+        sclerotia: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        seed: {
+          norm: { traducao: 'normal', valor: 1 },
+          abnorm: { traducao: 'anormal', valor: 2 }
+        },
+        seed_discolor: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        seed_size: {
+          'lt-norm': { traducao: 'menor-que-o-normal', valor: 1 },
+          norm: { traducao: 'normal', valor: 2 }
+        },
+        seed_tmt: {
+          none: { traducao: 'nenhum', valor: 1 },
+          fungicida: { traducao: 'fungicida', valor: 2 },
+          outros: { traducao: 'outros', valor: 3 }
+        },
+        severity: {
+          minor: { traducao: 'menor', valor: 1 },
+          'pot-severe': { traducao: 'potencialmente-severa', valor: 2 },
+          severe: { traducao: 'severa', valor: 3 }
+        },
+        shriveling: {
+          absent: { traducao: 'ausente', valor: 1 },
+          present: { traducao: 'presente', valor: 2 }
+        },
+        stem: {
+          norm: { traducao: 'normal', valor: 1 },
+          abnorm: { traducao: 'anormal', valor: 2 }
+        },
+        stem_cankers: {
+          absent: { traducao: 'ausente', valor: 1 },
+          'below-soil': { traducao: 'abaixo-do-solo', valor: 2 },
+          'above-soil': { traducao: 'acima-do-solo', valor: 3 },
+          'above-sec-nde': { traducao: 'acima-do-segundo-nó', valor: 4 }
+        },
+        temp: {
+          'lt-norm': { traducao: 'menor-que-o-normal', valor: 1 },
+          norm: { traducao: 'normal', valor: 2 },
+          'gt-norm': { traducao: 'maior-que-o-normal', valor: 3 }
+        }
+      },
+      selected: {
+        area_damaged: null,
+        canker_lesion: null,
+        crop_hist: null,
+        date: null,
+        external_decay: null,
+        fruit_spots: null,
+        fruiting_bodies: null,
+        fruit_pods: null,
+        germination: null,
+        hail: null,
+        int_discolor: null,
+        leaf_malf: null,
+        leaf_mild: null,
+        leaf_shread: null,
+        leafspots_halo: null,
+        leafspot_size: null,
+        leafspots_marg: null,
+        leaves: null,
+        lodging: null,
+        mold_growth: null,
+        mycelium: null,
+        plant_growth: null,
+        plant_stand: null,
+        precip: null,
+        roots: null,
+        sclerotia: null,
+        seed: null,
+        seed_discolor: null,
+        seed_size: null,
+        seed_tmt: null,
+        severity: null,
+        shriveling: null,
+        stem: null,
+        stem_cankers: null,
+        temp: null
+      }
+    }
+  },
+  methods: {
+    calcSim() {
+      const novo_caso = { ...this.selected }
+
+      axios
+        .post('http://localhost:3000/calcSim', { novo_caso })
+        .then((response) => {
+          console.log('Dados enviados com sucesso:', response.data)
+        })
+        .catch((error) => {
+          console.error('Erro ao enviar os dados:', error)
+        })
+    }
+  }
 }
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+</script>
+
+<style scoped>
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-button {
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
+select {
+  margin-bottom: 20px;
+  width: 200px;
 }
 </style>

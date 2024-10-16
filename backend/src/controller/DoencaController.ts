@@ -12,7 +12,7 @@ export class DoencaController {
     next: NextFunction
   ) {
     let { novo_caso } = request.body;
-    console.log(novo_caso);
+    //console.log(novo_caso);
     let casos = await this.recuperarCasos();
     let casos_convertidos = this.converterCasos(casos);
 

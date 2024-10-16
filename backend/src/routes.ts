@@ -2,7 +2,7 @@ import { DoencaController } from "./controller/DoencaController";
 
 export const Routes = [
   {
-    method: "get",
+    method: "post",
     route: "/calcSim",
     controller: DoencaController,
     action: "calcularSimilaridade",
