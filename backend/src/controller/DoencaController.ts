@@ -31,10 +31,10 @@ export class DoencaController {
     );
 
     if (similaridadeGlobalBase[0].similaridade >= 1)
-      return "Caso idêntico:" + similaridadeGlobalBase[0];
+      return similaridadeGlobalBase
     else {
       novo_caso_final.descDoenca = similaridadeGlobalBase[0].descDoenca;
-      await this.doencaRepository.save(novo_caso_final);
+      //await this.doencaRepository.save(novo_caso_final);
 
       return similaridadeGlobalBase;
     }
